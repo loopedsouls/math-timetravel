@@ -157,7 +157,7 @@ class _SplashScreenState extends State<SplashScreen>
                         const AnimatedLogo(size: 150),
                         const SizedBox(height: 24),
                         Text(
-                          'MathQuest',
+                          'Math TimeTravel',
                           style: Theme.of(context)
                               .textTheme
                               .headlineLarge

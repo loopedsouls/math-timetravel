@@ -1,8 +1,8 @@
 {
   "@@locale": "es",
   
-  "appTitle": "MathQuest",
-  "welcome": "¡Bienvenido a MathQuest!",
+  "appTitle": "Math TimeTravel",
+  "welcome": "¡Bienvenido a Math TimeTravel!",
   
   "login": "Iniciar Sesión",
   "register": "Registrarse",
@@ -86,7 +86,7 @@
   "settingsEditProfile": "Editar Perfil",
   "settingsChangePassword": "Cambiar Contraseña",
   "settingsExportData": "Exportar Datos",
-  "settingsAbout": "Acerca de MathQuest",
+  "settingsAbout": "Acerca de Math TimeTravel",
   "settingsTerms": "Términos de Uso",
   "settingsPrivacy": "Política de Privacidad",
   

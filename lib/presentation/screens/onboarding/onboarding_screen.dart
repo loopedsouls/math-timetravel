@@ -21,7 +21,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   final List<OnboardingPage> _pages = [
     const OnboardingPage(
       icon: Icons.calculate_outlined,
-      title: 'Bem-vindo ao MathQuest!',
+      title: 'Bem-vindo ao Math TimeTravel!',
       description: 'Aprenda matemática de forma divertida e interativa, '
           'alinhado com a BNCC para estudantes do 6º ao 9º ano.',
       color: Color(0xFF6C63FF),

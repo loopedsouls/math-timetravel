@@ -443,7 +443,7 @@ class AIService {
     }
 
     try {
-      return await _makeChatCompletionRequest('Diga "Olá, MathQuest!" em uma frase.');
+      return await _makeChatCompletionRequest('Diga "Olá, Math TimeTravel!" em uma frase.');
     } catch (e) {
       return 'Connection error: $e';
     }

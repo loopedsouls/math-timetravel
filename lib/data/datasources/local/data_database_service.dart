@@ -4,7 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 import 'package:path/path.dart';
 
-import 'package:mathquest/data/models/user_progress_model.dart';
+import 'package:math_timetravel/data/models/user_progress_model.dart';
 
 class DatabaseService {
   static Database? _database;

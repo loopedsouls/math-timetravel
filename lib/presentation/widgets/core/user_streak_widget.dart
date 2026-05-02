@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mathquest/data/datasources/local/gamification_service.dart';
-import 'package:mathquest/app/theme/app_theme.dart';
+import 'package:math_timetravel/data/datasources/local/gamification_service.dart';
+import 'package:math_timetravel/app/theme/app_theme.dart';
 
 class StreakWidget extends StatefulWidget {
   const StreakWidget({super.key});

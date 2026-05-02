@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-import 'package:mathquest/data/models/user_progress_model.dart';
+import 'package:math_timetravel/data/models/user_progress_model.dart';
 
 class FirestoreService {
   FirebaseFirestore? _firestore;

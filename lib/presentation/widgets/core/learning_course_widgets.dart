@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mathquest/data/models/course_model.dart';
-import 'package:mathquest/app/theme/app_theme.dart';
+import 'package:math_timetravel/data/models/course_model.dart';
+import 'package:math_timetravel/app/theme/app_theme.dart';
 
 /// Widget para exibir estatísticas de um curso
 class CursoStatsWidget extends StatelessWidget {

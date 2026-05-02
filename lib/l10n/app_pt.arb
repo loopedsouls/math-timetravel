@@ -2,12 +2,12 @@
   "@@locale": "pt",
   "@@last_modified": "2024-01-01T00:00:00.000Z",
   
-  "appTitle": "MathQuest",
+  "appTitle": "Math TimeTravel",
   "@appTitle": {
     "description": "O título do aplicativo"
   },
   
-  "welcome": "Bem-vindo ao MathQuest!",
+  "welcome": "Bem-vindo ao Math TimeTravel!",
   "@welcome": {
     "description": "Mensagem de boas-vindas"
   },
@@ -119,7 +119,7 @@
   "settingsEditProfile": "Editar Perfil",
   "settingsChangePassword": "Alterar Senha",
   "settingsExportData": "Exportar Dados",
-  "settingsAbout": "Sobre o MathQuest",
+  "settingsAbout": "Sobre o Math TimeTravel",
   "settingsTerms": "Termos de Uso",
   "settingsPrivacy": "Política de Privacidade",
   

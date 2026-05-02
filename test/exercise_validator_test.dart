@@ -1,5 +1,5 @@
 import 'package:test/test.dart';
-import 'package:mathquest/core/utils/exercise_validator.dart';
+import 'package:math_timetravel/core/utils/exercise_validator.dart';
 
 void main() {
   group('ExerciseValidator', () {

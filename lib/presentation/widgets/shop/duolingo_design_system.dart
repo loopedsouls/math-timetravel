@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-/// Duolingo-style Design System for MathQuest Shop
+/// Duolingo-style Design System for Math TimeTravel Shop
 /// Provides gamified components with rounded shapes, vibrant colors, and playful animations
 
 // ============================================================================

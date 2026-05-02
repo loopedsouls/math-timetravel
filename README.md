@@ -1,3 +1,11 @@
+# Chronokairo - Math TimeTravel
+
+> _Aprenda matemática viajando pelas eras._
+
+Tutor adaptativo de matemática alinhado à BNCC para o Ensino Fundamental II (6º ao 9º ano), com IA generativa via OpenRouter. Irmão de [English TimeTravel](https://github.com/chronokairo-dotcom/english-timetravel).
+
+---
+
 ## 🎯 Objetivo do Sistema
 
 Ensinar Matemática de forma adaptativa e personalizada para alunos do Ensino Fundamental 2, usando BNCC. Permitir atividades desplugadas, com suporte digital opcional para monitoramento e feedback. Gerar tutoria inteligente usando IA generativa para criar exercícios, problemas contextualizados, dicas, explicações passo a passo e avaliações.

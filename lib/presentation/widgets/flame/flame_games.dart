@@ -1,4 +1,4 @@
-/// Flame game components for MathQuest
+/// Flame game components for Math TimeTravel
 /// 
 /// Professional animations using the Flame engine for:
 /// - Splash screen with floating math symbols

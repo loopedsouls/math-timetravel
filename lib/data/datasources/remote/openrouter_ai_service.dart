@@ -211,7 +211,7 @@ Forneça uma explicação clara:''';
         request.headers.set('Authorization', 'Bearer $apiKey');
         request.headers.set('Content-Type', 'application/json');
         request.headers.set('HTTP-Referer', 'https://mathquest.app');
-        request.headers.set('X-Title', 'MathQuest');
+        request.headers.set('X-Title', 'Math TimeTravel');
         request.write(body);
 
         final response = await request.close();

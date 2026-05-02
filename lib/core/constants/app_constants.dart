@@ -3,7 +3,7 @@ class AppConstants {
   AppConstants._();
 
   // App info
-  static const String appName = 'MathQuest';
+  static const String appName = 'Math TimeTravel';
   static const String appVersion = '1.0.0';
   static const String appDescription = 'Sistema de Tutoria Matemática Adaptativa';
 

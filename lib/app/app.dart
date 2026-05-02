@@ -5,13 +5,13 @@ import 'routes.dart';
 import '../main.dart';
 
 /// Main Application Widget
-class MathQuestApp extends StatelessWidget {
-  const MathQuestApp({super.key});
+class Math TimeTravelApp extends StatelessWidget {
+  const Math TimeTravelApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'MathQuest - Tutoria Inteligente',
+      title: 'Math TimeTravel - Tutoria Inteligente',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,

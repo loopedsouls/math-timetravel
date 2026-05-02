@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mathquest/app/theme/app_theme.dart';
+import 'package:math_timetravel/app/theme/app_theme.dart';
 
 /// Botão moderno e responsivo
 class ModernButton extends StatelessWidget {

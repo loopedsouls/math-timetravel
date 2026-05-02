@@ -137,7 +137,7 @@ class MathTutorApp extends StatelessWidget {
         builder: (context) {
           final isDark = context.isDuoThemeDark;
           return MaterialApp(
-            title: 'MathQuest - Tutoria Inteligente',
+            title: 'Math TimeTravel - Tutoria Inteligente',
             debugShowCheckedModeBanner: false,
             theme: AppTheme.lightTheme,
             darkTheme: AppTheme.darkTheme,

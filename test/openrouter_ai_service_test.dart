@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mathquest/data/datasources/remote/openrouter_ai_service.dart';
+import 'package:math_timetravel/data/datasources/remote/openrouter_ai_service.dart';
 
 void main() {
   group('parseExerciseJson', () {

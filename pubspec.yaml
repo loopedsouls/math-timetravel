@@ -1,5 +1,5 @@
-name: mathquest
-description: "Adaptive BNCC math tutor for Brazilian middle-school students (EF2). Uses generative AI for personalized exercises, hints, and step-by-step explanations."
+name: math_timetravel
+description: "Math TimeTravel — adaptive BNCC math tutor for Brazilian middle-school students (EF2). Learn through historical journeys with AI-tutored exercises, hints, and step-by-step explanations."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: "none" # Remove this line if you wish to publish to pub.dev

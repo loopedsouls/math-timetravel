@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
-import 'package:mathquest/app/theme/app_theme.dart';
-import 'package:mathquest/data/datasources/remote/firebase_ai_service.dart';
+import 'package:math_timetravel/app/theme/app_theme.dart';
+import 'package:math_timetravel/data/datasources/remote/firebase_ai_service.dart';
 
 class QueueStatusIndicator extends StatefulWidget {
   const QueueStatusIndicator({super.key});

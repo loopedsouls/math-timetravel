@@ -201,7 +201,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             iconColor: DuoColors.blue,
             children: [
               _buildListTile(
-                title: 'Sobre o MathQuest',
+                title: 'Sobre o Math TimeTravel',
                 icon: Icons.help_outline_rounded,
                 onTap: () => _showAboutDialog(),
               ),
@@ -259,7 +259,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
           const SizedBox(height: 24),
           Center(
             child: Text(
-              'MathQuest v1.0.0',
+              'Math TimeTravel v1.0.0',
               style: TextStyle(color: theme.textSecondary, fontSize: 13),
             ),
           ),
@@ -747,12 +747,12 @@ class _SettingsScreenState extends State<SettingsScreen> {
               child: Icon(Icons.calculate_rounded, size: 48, color: theme.accent),
             ),
             const SizedBox(height: 16),
-            Text('MathQuest', style: TextStyle(color: theme.textPrimary, fontSize: 24, fontWeight: FontWeight.bold)),
+            Text('Math TimeTravel', style: TextStyle(color: theme.textPrimary, fontSize: 24, fontWeight: FontWeight.bold)),
             const SizedBox(height: 4),
             Text('Versão 1.0.0', style: TextStyle(color: DuoColors.gray.withValues(alpha: 0.7), fontSize: 14)),
             const SizedBox(height: 16),
             const Text(
-              'MathQuest é um aplicativo de aprendizado de matemática gamificado, alinhado com a Base Nacional Comum Curricular (BNCC) para estudantes do 6º ao 9º ano do Ensino Fundamental.',
+              'Math TimeTravel é um aplicativo de aprendizado de matemática gamificado, alinhado com a Base Nacional Comum Curricular (BNCC) para estudantes do 6º ao 9º ano do Ensino Fundamental.',
               textAlign: TextAlign.center,
               style: TextStyle(color: DuoColors.gray, height: 1.4),
             ),
