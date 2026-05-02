@@ -4,6 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:meta/meta.dart';
 import '../../../core/constants/api_endpoints.dart';
 import '../../../core/constants/openrouter_config.dart';
+import '../../../core/constants/math_eras.dart';
 
 class OpenRouterAIService {
   static OpenRouterAIService? _instance;
@@ -266,5 +267,97 @@ Forneça uma explicação clara:''';
     }
 
     return null;
+  }
+
+  // ============================================================
+  // Math TimeTravel — era-flavored exercise generation
+  // ============================================================
+
+  /// Generates a multiple-choice exercise contextualized in a [MathEra].
+  ///
+  /// The AI is told to use historically-flavored framing (e.g. a Babylonian
+  /// scribe counting jars, a Greek architect designing a temple) while
+  /// keeping the underlying math aligned with one of the era's
+  /// [MathEra.bnccThemes].
+  ///
+  /// Returns the same JSON shape as [gerarExercicioPersonalizado] plus an
+  /// extra optional `contexto_historico` field with 1–2 sentences placing
+  /// the problem in time.
+  Future<Map<String, dynamic>?> gerarExercicioPorEra({
+    required MathEra era,
+    required String dificuldade,
+    int? anoEscolar,
+    String? temaPreferido,
+  }) async {
+    if (!isAvailable) return null;
+
+    _isProcessing = true;
+    _queueSize++;
+
+    try {
+      final ano = anoEscolar ?? era.bnccGrades.last;
+      final tema = temaPreferido ??
+          era.bnccThemes[
+              DateTime.now().millisecondsSinceEpoch % era.bnccThemes.length];
+
+      final systemPrompt =
+          '''Você é um tutor de matemática para estudantes brasileiros do Ensino Fundamental II (6º ao 9º ano), seguindo a BNCC.
+Você está conduzindo o aluno por uma JORNADA HISTÓRICA pela matemática — cada exercício é ambientado em uma era específica.
+Gere UMA questão de múltipla escolha em português brasileiro, com sabor histórico mas matemática moderna.
+Responda APENAS com JSON válido com as chaves:
+- pergunta: string (enunciado matemático com 1-2 frases de contexto histórico embutido)
+- opcoes: array de 4 strings
+- resposta_correta: string idêntica a uma das opcoes
+- explicacao: string (explicação passo a passo)
+- contexto_historico: string (1-2 frases sobre a era e quem usava essa matemática)
+- tema_bncc: string (tema da BNCC trabalhado)''';
+
+      final userPrompt =
+          '''Gere um exercício para a JORNADA pela ${era.namePt} (${era.yearRange}).
+
+Contexto da era: ${era.description}
+
+Parâmetros:
+- Tema BNCC: $tema
+- Dificuldade: $dificuldade
+- Ano escolar: ${ano}º ano
+
+Use personagens, lugares ou problemas reais da época (ex: escribas babilônicos, geômetras gregos, comerciantes da Rota da Seda, banqueiros florentinos, etc) para ambientar o problema. A matemática em si deve ser apropriada ao $ano° ano EF2 e alinhada à BNCC.
+
+Responda APENAS com JSON válido.''';
+
+      final result = await _chat(
+        userPrompt,
+        systemPrompt: systemPrompt,
+        temperature: 0.75,
+        maxTokens: 1200,
+      );
+      if (result == null) return null;
+
+      final parsed = parseExerciseJson(result);
+      if (parsed == null) return null;
+
+      // Required keys (contexto_historico/tema_bncc are optional bonuses)
+      const required = ['pergunta', 'opcoes', 'resposta_correta', 'explicacao'];
+      for (final key in required) {
+        if (!parsed.containsKey(key)) return null;
+      }
+
+      final opcoes = parsed['opcoes'];
+      if (opcoes is! List || opcoes.length != 4) return null;
+      if (!opcoes.contains(parsed['resposta_correta'])) return null;
+
+      // Tag the era so downstream code can theme/track it
+      parsed['era_id'] = era.id;
+      parsed['era_name'] = era.namePt;
+
+      return parsed;
+    } catch (e) {
+      if (kDebugMode) print('gerarExercicioPorEra failed: $e');
+      return null;
+    } finally {
+      _isProcessing = false;
+      _queueSize = (_queueSize - 1).clamp(0, 1 << 30);
+    }
   }
 }
