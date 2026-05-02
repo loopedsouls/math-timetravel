@@ -27,4 +27,8 @@ class ApiEndpoints {
 
   // Kaggle (for models)
   static const String kaggleBaseUrl = 'https://www.kaggle.com';
+
+  // OpenRouter (LLM aggregator, free tier)
+  static const String openRouterBaseUrl = 'https://openrouter.ai/api/v1';
+  static const String openRouterChat = '$openRouterBaseUrl/chat/completions';
 }

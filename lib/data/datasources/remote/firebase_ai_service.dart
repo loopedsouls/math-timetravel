@@ -1,7 +1,13 @@
 import 'dart:io';
 import 'package:flutter/foundation.dart';
 
-/// Firebase AI Service for generating personalized exercises
+/// Firebase AI Service for generating personalized exercises.
+///
+/// **DEPRECATED (2026-05):** This is a stub from the early Gemini-only era.
+/// New code should call [OpenRouterAIService] instead, which actually hits a
+/// real model. Keep this class only as an offline fallback. When `firebase_ai`
+/// is wired back in, replace the bodies of the public methods.
+@Deprecated('Use OpenRouterAIService for real generation. This is a stub.')
 class FirebaseAIService {
   static FirebaseAIService? _instance;
   

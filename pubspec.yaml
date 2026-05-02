@@ -1,5 +1,5 @@
 name: mathquest
-description: A new Flutter project.
+description: "Adaptive BNCC math tutor for Brazilian middle-school students (EF2). Uses generative AI for personalized exercises, hints, and step-by-step explanations."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: "none" # Remove this line if you wish to publish to pub.dev
@@ -47,51 +47,32 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
 
+  # Networking & local persistence
   http: ^1.2.1
   shared_preferences: ^2.2.3
-  flutter_markdown: ^0.7.3
-  flutter_math_fork: ^0.7.2
-  flame: ^1.13.1
-
-  # Firebase AI Logic (única IA do projeto)
-  # firebase_ai: ^2.3.0
-
-  # OpenAI API
-  # chat_gpt_sdk: ^3.0.2
-
-  # Para gráficos de progresso
-  fl_chart: ^0.65.0
-
-  # Para reconhecimento de imagem
-  google_ml_kit: ^0.18.0
-  image_picker: ^1.0.7
-
-  # Para banco de dados local
   sqflite: ^2.3.0
-  sqflite_common_ffi: ^2.3.0 # Para suporte a Windows/Linux/macOS
+  sqflite_common_ffi: ^2.3.0 # Desktop support (Windows/Linux/macOS)
   path: ^1.8.3
 
-  # Para variáveis de ambiente
+  # Markdown + math rendering
+  flutter_markdown: ^0.7.3
+  flutter_math_fork: ^0.7.2
+
+  # Game/journey map
+  flame: ^1.13.1
+
+  # AI providers: see lib/data/datasources/remote/openrouter_ai_service.dart
+  # OpenRouter is the active provider (free-tier model rotation).
+  # FirebaseAIService remains as an offline stub fallback.
+
+  # Charts
+  fl_chart: ^0.65.0
+
+  # i18n + env vars + URL handling
   flutter_dotenv: ^5.1.0
-
-  # Para copiar texto e gerar PDF
-  pdf: ^3.10.4
-  printing: ^5.11.0
-  path_provider: ^2.1.1
   intl: ^0.20.2
-  file_picker: ^10.3.2
-
-  # Para gráficos interativos
-  syncfusion_flutter_charts: ^31.1.23
-
-  # Para XML parsing
-  xml: ^6.5.0
-
-  # Para abrir URLs
   url_launcher: ^6.2.6
   vector_math: ^2.2.0
-  flutter_svg: ^2.2.1
-  google_mlkit_image_labeling: ^0.12.1
 
 dev_dependencies:
   flutter_test:
@@ -102,7 +83,7 @@ dev_dependencies:
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^2.0.0
+  flutter_lints: ^5.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -115,17 +96,19 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  assets:
-    - assets/models/Algebrista.svg
-    - assets/models/Dedicado.svg
-    - assets/models/Estatistico.svg
-    - assets/models/Evoluindo.svg
-    - assets/models/Geômetra.svg
-    - assets/models/MEdidor-Expert.svg
-    - assets/models/Mestre-BNCC.svg
-    - assets/models/Mestre-dos-números.svg
-    - assets/models/Primeiro-Passo.svg
-    - assets/models/Progredidndo.svg
+  # NOTE: assets/models/*.svg are declared but currently unrendered (no flutter_svg).
+  # Re-enable + add flutter_svg back when a widget consumes them.
+  # assets:
+  #   - assets/models/Algebrista.svg
+  #   - assets/models/Dedicado.svg
+  #   - assets/models/Estatistico.svg
+  #   - assets/models/Evoluindo.svg
+  #   - assets/models/Geômetra.svg
+  #   - assets/models/MEdidor-Expert.svg
+  #   - assets/models/Mestre-BNCC.svg
+  #   - assets/models/Mestre-dos-números.svg
+  #   - assets/models/Primeiro-Passo.svg
+  #   - assets/models/Progredidndo.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
